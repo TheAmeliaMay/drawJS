@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Draw.js</title>
+    <meta charset="utf-8">
+
+    <meta name="author" content="Amelia May Johnson">
+    <meta name="description" content="A JavaScript library that makes drawing with <canvas> elements much easier.">
+    <meta name="tags" content="javaScript js draw drawing html5">
+    <script src="draw.js"></script>
+    <script type="text/javascript">window.onload = function() { init() }</script>
+</head>
+<body style="margin-top: 5%; margin-left: 25%; margin-right: 25%; text-align: center">
+    <h1>Draw.js</h1>
+    <p>A JavaScript library that makes drawing with &lt;canvas&gt; elements much easier. This file is a test to help you get started with draw.js. You can delete it, or you can change it — whatever works for you! If you want to draw in 3D, check out <a href="https://threejs.org/">three.js,</a> which is not made by me and is unaffiliated with this project.</p>
+
+    <canvas id="canvas" width="700" height="500">
+
+    <script type="text/javascript">
+        //this is how you change the background color
+        setBGCOLOR(GREEN);
+
+        //this is how you change the font
+        setFONT('20px Georgia');
+
+        //make sure to define your draw function!
+        //it's what tells draw.js what to do
+        function draw() {
+            //this is how you draw a rectangle WITHOUT an outline
+            rect(ORANGE, 50, 80, 90, 70);
+
+            //this is how you draw a rectangle WITH an outline
+            rect(RED, 500, 300, 100, 60, WHITE, 5);
+
+            //this is how you draw a perfect square
+            square(BLUE, 300, 200, 100);
+
+            //this is how you draw an equilateral or isosceles triangle
+            tri(PINK, 240, 60, 80, 60);
+
+            //you can specify an equilateral
+            eqTri(PURPLE, 500, 100, 40);
+
+            //this is how you draw a right triangle
+            riTri(WHITE, 600, 400, 50, 50);
+
+            //you can make the width or height negative to change where the right angle is
+            riTri(WHITE, 150, 300, -50, 60, RED, 2);
+
+            //this is how you draw an ellipse
+            ellip(BROWN, 200, 400, 20, 30);
+
+            //this is how you draw a circle
+            circ(YELLOW, 600, 100, 30);
+
+            //this is how you draw a polygon
+            poly(GRAY, [
+                [280, 350],
+                [310, 360],
+                [390, 320],
+                [420, 415],
+                [400, 420],
+                [300, 460],
+                [270, 400]
+            ], BLACK);
+
+            //this is how you draw text
+            drawTxt(BLACK, 'Draw.js!', 100, 250);
+
+            //you can give your text an outline, change the alignment, etc.
+            drawTxt(CLEAR, 'Draw.js!', 595, 310, '25px Arial', BLACK, 1, 'right', 'top');
+        }
+    </script>
+</body>
+</html>
