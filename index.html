@@ -32,6 +32,11 @@
             //this is how you draw a rectangle WITH an outline
             rect(RED, 500, 300, 100, 60, WHITE, 5);
 
+            //this is how you rotate an object
+            rot(0.5);
+            rect(RED, 320, -140, 100, 60, WHITE, 5);
+            resetRot(); //make sure to reset the rotation (or apply an opposite rotation), or the canvas will rotate forever!
+
             //this is how you draw a perfect square
             square(BLUE, 300, 200, 100);
 
