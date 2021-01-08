@@ -47,6 +47,13 @@ function resetRot() {
     ctx.resetTransform();
 }
 
+//draw an image
+function drawImg(src, x, y) {
+    var image = new Image();
+    image.src = src;
+    ctx.drawImage(image, x, y);
+}
+
 //draw a rectangle on the canvas
 function rect(fill, x, y, w, h, stroke=CLEAR, line=1) {
     ctx.fillStyle = fill;
